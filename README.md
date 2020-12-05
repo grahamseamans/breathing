@@ -1,3 +1,3 @@
-* Breathing
+# Breathing
 
 Ujjayi breathing timer with animation.
