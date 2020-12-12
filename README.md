@@ -1,3 +1,3 @@
 # Breathing
 
-Ujjayi breathing timer with animation.
+Ujjayi breathing timer animation.
