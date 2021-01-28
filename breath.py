@@ -1,38 +1,28 @@
 # breath.py Graham Seamans
+# Ujjayi breathing animation
 
-import time
 import os
-import numpy as np
 import sys
-import math
+from utils import breath
 
-COARSE = 50
-clear_count = 0
+
+def clear(clear_count):
+    clear_count += 1
+    if clear_count > 100:
+        os.system("clear")
+        return 0
+    else:
+        return clear_count
+
 
 try:
     os.system("tput civis")
+    clear_count = 0
 
     while True:
+        breath(14)
+        clear_count = clear(clear_count)
 
-        for i in np.arange(0, math.pi * 2, (math.pi * 2) / COARSE):
-            print(int((((math.cos(i) + 1) * 15 + 1))) * "#")
-            time.sleep(14 / COARSE)
-
-        clear_count += 1
-        if clear_count > 100:
-            os.system("clear")
-            clear_count = 0
-
-    """
-    while True:
-        for i in range(1,8):
-            print(i * '#')
-            time.sleep(1)
-        for i in range(7,0,-1):
-            print(i * '#')
-            time.sleep(1)
-
-    """
 except KeyboardInterrupt:
     print()
 except Exception as e:
