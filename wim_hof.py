@@ -1,6 +1,5 @@
 # wim_hof.py Graham Seamans
-# Wim Hof breathing animation
-# and timing helper utility
+# Wim Hof breathing helper
 
 import os
 import sys
@@ -18,7 +17,7 @@ def hold():
     input("Press enter when done with breath hold")
 
 
-def deep():
+def recovery():
     print("Deep breath")
     breath(20)
 
@@ -26,7 +25,7 @@ def deep():
 def cycle():
     fast()
     hold()
-    deep()
+    recovery()
 
 
 try:

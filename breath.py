@@ -6,22 +6,22 @@ import sys
 from utils import breath
 
 
-def clear(clear_count):
-    clear_count += 1
-    if clear_count > 100:
+def clear_per_100_breath(breath_count):
+    breath_count += 1
+    if breath_count >= 100:
         os.system("clear")
         return 0
     else:
-        return clear_count
+        return breath_count
 
 
 try:
     os.system("tput civis")
-    clear_count = 0
+    breath_count = 0
 
     while True:
         breath(14)
-        clear_count = clear(clear_count)
+        breath_count = clear_per_100_breath(breath_count)
 
 except KeyboardInterrupt:
     print()
